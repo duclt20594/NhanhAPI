@@ -67,7 +67,8 @@ $data = array(
 );
 
 // the storeId in e-commerce platforms, individual websites set $storeId = null;
-$storeId = 2335458;
+// $storeId = 2335458;
+$storeId = null;
 
 $service = new NhanhService();
 $response = $service->sendRequest(NhanhService::URI_ORDER_ADD, $data, $storeId);
