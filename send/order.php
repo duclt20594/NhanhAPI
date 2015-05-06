@@ -51,7 +51,8 @@ $data = array(
             "code" => "SSGS2",
             "name" => "Samsung Galaxy S2",
             "importPrice" => 12000000,
-            "price" => 13500000
+            "price" => 13500000,
+            "description" => 'Lấy màu trắng nếu không có màu đen'
         ),
         array(
             "id" => 1572134,
