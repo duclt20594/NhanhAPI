@@ -4,6 +4,8 @@
  * Code sample to send the detailed product's information.
  * Nhanh.vn will check if the $product->getId() is existed or not
  * to insert or update the record in Nhanh.vn
+ *
+ * Mỗi lần đẩy dữ liệu qua nhanh chấp nhận tối đa 300 sp / lần
  */
 header('Content-type: text/html; charset=utf-8');
 
@@ -16,17 +18,20 @@ $data = array(
         "name" => "Samsung Galaxy S2",
         "importPrice" => 12000000,
         "price" => 13500000,
-    )
+    ),
+    array(
+        "id" => 1541247,
+        "code" => "SSGS3",
+        "name" => "Samsung Galaxy S3",
+        "importPrice" => 12000000,
+        "price" => 13500000,
+    ),
 );
 
-$service = new NhanhService();
-
 // the storeId in e-commerce platforms, individual websites set $storeId = null;
-$storeId = 2335458;
-// If the product was synchronized from Nhanh.vn, the merchant website must save the idNhanh
-// for each product in merchant website and use this id to get more information from Nhanh.vn
-$nhanhProductId = 775352;
+$storeId = null;
 
+$service = new NhanhService();
 $response = $service->sendRequest(NhanhService::URI_ADD_PRODUCT, $data, $storeId);
 
 if($response->code) {
