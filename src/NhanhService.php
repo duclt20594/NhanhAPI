@@ -26,12 +26,12 @@ class NhanhService
 
     /**
      * the server address.
-     * testing: http://vanck.dev.nhanh.vn
-     * production: https://dev.nhanh.vn
+     * testing: http://dev.nhanh.vn
+     * production: https://nhanh.vn
      *
      * @var string
      */
-    protected $server = "http://vanck.dev.nhanh.vn";
+    protected $server = "http://dev.nhanh.vn";
 //     protected $server = "https://nhanh.vn";
 
     /**
